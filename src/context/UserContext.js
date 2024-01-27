@@ -1,5 +1,12 @@
-import React from "react";
+import {createContext, useContext} from "react";
 
-const UserContext = React.createContext();
+// creating user context and setting the default values
+export const UserContext = createContext({user: null,setUser:()=>{}});
 
-export default UserContext;
+// exporting user context provider
+export const UserProvider = UserContext.Provider;
+
+// exporting custom hook for user context
+export default function useUserContext(){
+    return useContext(UserContext);
+}

@@ -1,27 +1,25 @@
-import { useContext, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import { useState } from 'react'
 import './App.css'
-import UserContextProvider from './context/UserContextProvider'
 import Login from './components/Login'
 import Profile from './components/Profile'
-import UserContext from './context/UserContext'
+import useUserContext, { UserProvider } from './context/UserContext'
 
 function App() {
-  // const [count, setCount] = useState(0)
-  const {user} = useContext(UserContext);
+  const [user, setUser1] = useState(null);
+
+  const setUser=(newUser)=>{
+    setUser1(newUser);
+  }
 
   return (
     <>
-    
-      {
-        user ? <Profile/> : <Login/>
-      }
-      
-      <p>
-        Click on the Vite and React logos to learn more
-      </p>
-    
+    <UserProvider value={{user, setUser}}>
+     
+      <Login/>
+      <Profile/>
+
+    </UserProvider>
     </>
   )
 }
