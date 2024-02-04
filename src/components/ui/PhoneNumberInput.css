@@ -1,0 +1,30 @@
+.phone-input-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .phone-label {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: bold;
+  }
+  .phone-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    appearance: none;
+    outline: none;
+  }
+  .phone-input.invalid:focus {
+    border-color: red;
+  }
+  .phone-input:focus {
+    border-color: #3fec3f;
+  }
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }

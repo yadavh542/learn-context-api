@@ -16,8 +16,8 @@ function App() {
     <>
     <UserProvider value={{user, setUser}}>
      
-      <Login/>
-      <Profile/>
+      {!user?<Login/> :
+      <Profile/>}
 
     </UserProvider>
     </>
