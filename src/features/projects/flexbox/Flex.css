@@ -1,0 +1,20 @@
+
+.flexbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 50vh;
+}
+
+.flexbox-item{
+    width: 200px;
+    margin: 10px;
+    border: 2px solid black;
+    background: rgb(215, 214, 214);
+}
+
+.flexbox-item-1 {
+    flex-shrink: 0;
+}
+.flexbox-item-2 {
+    flex-grow: 1;
+} 

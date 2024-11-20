@@ -17,6 +17,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<App />}>
       {/* public routes */}
+      <Route path="/" element={<Home />} />
       <Route element={<AuthLayout />}>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<Signup />} />
@@ -30,7 +31,6 @@ const router = createBrowserRouter(
           </ProtectedRoute>
         }
       >
-        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/pricing" element={<Pricing />} />
       </Route>
