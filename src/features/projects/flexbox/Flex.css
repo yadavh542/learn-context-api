@@ -2,7 +2,7 @@
 .flexbox-container {
     display: flex;
     flex-wrap: wrap;
-    height: 50vh;
+    height: 100vh;
 }
 
 .flexbox-item{
@@ -13,7 +13,8 @@
 }
 
 .flexbox-item-1 {
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
+    width: fit-content;
 }
 .flexbox-item-2 {
     flex-grow: 1;
